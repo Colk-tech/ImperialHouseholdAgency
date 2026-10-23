@@ -14,7 +14,7 @@ if TYPE_CHECKING:  # pragma: no cover
 class BindEntry[InterfaceT: ABC]:
     interface: type[InterfaceT]
     to: type[InterfaceT] | InterfaceT
-    scope: "None | type['Scope'] | 'ScopeDecorator'" = None
+    scope: "None | type[Scope] | ScopeDecorator" = None
 
 
 class ModuleBase(Module):
