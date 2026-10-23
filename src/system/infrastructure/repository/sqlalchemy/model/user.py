@@ -36,12 +36,12 @@ class User(ULIDMixin, CreatedAtMixin, UpdatedAtMixin, Base):
     user_id: Mapped[str] = mapped_column(String(), nullable=False)
 
     # Forward populates
-    messenger: Mapped[Messenger] = relationship(
+    messenger: Mapped["Messenger"] = relationship(
         "Messenger", back_populates="users", foreign_keys=[messenger_record_id]
     )
 
     # Back populates
-    nickname_changelogs: Mapped[list[NicknameChangelog]] = relationship(
+    nickname_changelogs: Mapped[list["NicknameChangelog"]] = relationship(
         "NicknameChangelog",
         back_populates="user",
     )

@@ -22,4 +22,4 @@ class Messenger(ULIDMixin, CreatedAtMixin, UpdatedAtMixin, Base):
     name: Mapped[str] = mapped_column(String(), nullable=False)
 
     # Back populates
-    users: Mapped[list[User]] = relationship("User", back_populates="messenger")
+    users: Mapped[list["User"]] = relationship("User", back_populates="messenger")

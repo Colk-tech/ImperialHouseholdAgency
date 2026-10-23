@@ -14,13 +14,13 @@ if TYPE_CHECKING:  # pragma: no cover
 class BindEntry[InterfaceT: ABC]:
     interface: type[InterfaceT]
     to: type[InterfaceT] | InterfaceT
-    scope: None | type[Scope] | ScopeDecorator = None
+    scope: "None | type[Scope] | ScopeDecorator" = None
 
 
 class ModuleBase(Module):
-    _BINDINGS: ClassVar[Iterable[BindEntry[ABC]]]
+    _BINDINGS: ClassVar["Iterable[BindEntry[ABC]]"]
 
-    def configure(self, binder: Binder) -> None:
+    def configure(self, binder: "Binder") -> None:
         for entry in self._BINDINGS:
             binder.bind(
                 interface=entry.interface,

@@ -27,6 +27,6 @@ class NicknameChangelog(ULIDMixin, CreatedAtMixin, Base):
     after: Mapped[str] = mapped_column(String(), nullable=False)
 
     # Forward populates
-    user: Mapped[User] = relationship(
+    user: Mapped["User"] = relationship(
         "User", back_populates="nickname_changelogs", foreign_keys=[user_record_id]
     )
