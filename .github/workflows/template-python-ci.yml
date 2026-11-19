@@ -61,14 +61,6 @@ jobs:
             ${{ env.IMAGE_TO_TEST }} \
             uv run ty check .
 
-      - name: Run mypy type checking in container
-        run: |
-          docker run --rm \
-            -v "${{ github.workspace }}:/app" \
-            -w /app \
-            ${{ env.IMAGE_TO_TEST }} \
-            uv run mypy ./ --strict
-
       - name: Run ruff linter in container
         run: |
           docker run --rm \
