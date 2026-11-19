@@ -1,5 +1,3 @@
-# mypy: disable-error-code="unused-ignore"
-# mypy conflicts with ty
 import os
 
 from pydantic import Field, HttpUrl
