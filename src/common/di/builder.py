@@ -18,7 +18,7 @@ class BindEntry[InterfaceT: ABC]:
 
 
 class ModuleBase(Module):
-    _BINDINGS: ClassVar[Iterable[BindEntry[ABC]]]
+    _BINDINGS: ClassVar[Iterable[BindEntry]]
 
     def configure(self, binder: Binder) -> None:
         for entry in self._BINDINGS:
