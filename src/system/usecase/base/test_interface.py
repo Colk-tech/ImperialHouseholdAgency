@@ -5,4 +5,4 @@ from src.system.usecase.base.interface import UsecaseIf
 
 def test_usecase_if_is_abstract() -> None:
     with pytest.raises(TypeError):
-        UsecaseIf()  # ty: ignore[abstract-class-instantiation]
+        UsecaseIf()  # type: ignore[abstract]
