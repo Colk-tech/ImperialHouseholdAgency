@@ -144,9 +144,7 @@ class TestRecordNicknameChangeUsecaseExecute:
                 "src.system.usecase.nickname.record_nickname_change.generate_ulid"
             ) as mock_generate_ulid,
         ):
-            mock_utcnow.return_value = datetime(
-                2023, 1, 1, 12, 0, 0, tzinfo=UTC
-            )
+            mock_utcnow.return_value = datetime(2023, 1, 1, 12, 0, 0, tzinfo=UTC)
             mock_generate_ulid.return_value = generate_ulid()
 
             result = await usecase.execute(request_dto)
@@ -259,9 +257,7 @@ class TestRecordNicknameChangeUsecaseExecute:
                 "src.system.usecase.nickname.record_nickname_change.generate_ulid"
             ) as mock_generate_ulid,
         ):
-            mock_utcnow.return_value = datetime(
-                2023, 1, 1, 12, 0, 0, tzinfo=UTC
-            )
+            mock_utcnow.return_value = datetime(2023, 1, 1, 12, 0, 0, tzinfo=UTC)
             mock_generate_ulid.return_value = generate_ulid()
 
             result = await usecase.execute(request_dto)
@@ -309,9 +305,7 @@ class TestRecordNicknameChangeUsecaseExecute:
                 "src.system.usecase.nickname.record_nickname_change.generate_ulid"
             ) as mock_generate_ulid,
         ):
-            mock_utcnow.return_value = datetime(
-                2023, 1, 1, 12, 0, 0, tzinfo=UTC
-            )
+            mock_utcnow.return_value = datetime(2023, 1, 1, 12, 0, 0, tzinfo=UTC)
             mock_generate_ulid.return_value = generate_ulid()
 
             result = await usecase.execute(request_dto)
@@ -369,9 +363,7 @@ class TestRecordNicknameChangeUsecaseExecute:
                 "src.system.usecase.nickname.record_nickname_change.generate_ulid"
             ) as mock_generate_ulid,
         ):
-            mock_utcnow.return_value = datetime(
-                2023, 1, 1, 12, 0, 0, tzinfo=UTC
-            )
+            mock_utcnow.return_value = datetime(2023, 1, 1, 12, 0, 0, tzinfo=UTC)
             mock_generate_ulid.return_value = generate_ulid()
 
             result = await usecase.execute(request_dto)

@@ -37,12 +37,12 @@
 #     This ensures that source code changes do not invalidate dependency cache.
 
 # Python version to use (e.g., 3.11, 3.12, 3.13, 3.14)
-ARG PYTHON_VERSION=3.13
+ARG PYTHON_VERSION=3.14
 
 # uv version - uses distroless uv image with {major}.{minor} format
 # This automatically uses the latest patch version within the specified minor version
 # See: https://docs.astral.sh/uv/guides/integration/docker/
-ARG UV_VERSION=0.11
+ARG UV_VERSION=0.13
 
 ARG PYTHON_BIN_PATH=/opt/python
 ARG VENV_DIR=/opt/venv
