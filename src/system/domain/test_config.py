@@ -26,4 +26,4 @@ def test_environment_enum_all_values() -> None:
 
 def test_domain_config_if_is_abstract() -> None:
     with pytest.raises(TypeError):
-        DomainConfigIf()  # type: ignore[abstract]
+        DomainConfigIf()  # ty: ignore[abstract-class-instantiation]

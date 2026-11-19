@@ -5,4 +5,4 @@ from src.system.infrastructure.repository.sqlalchemy.config import SQLAlchemyCon
 
 def test_sqlalchemy_config_if_is_abstract() -> None:
     with pytest.raises(TypeError):
-        SQLAlchemyConfigIf()  # type: ignore[abstract]
+        SQLAlchemyConfigIf()  # ty: ignore[abstract-class-instantiation]
